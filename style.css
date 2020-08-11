@@ -4,3 +4,101 @@
 	box-sizing: border-box;
 }
 
+body {
+	background: #FCFEFE;
+}
+
+header {
+	padding: 0em 2em;
+	width: 90vw;
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+}
+
+.title {
+	width: 90vw;
+	text-align: center;
+	padding: .75em;
+}
+
+.ctrl-btns {
+	width: 90vw;
+	padding: 1em;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-flow: row;
+}
+
+button {
+	border-bottom-color: #572B00;
+	border-right-color: #572B00;
+	border-top-color: #E8B32A; 
+	border-left-color: #E8B32A;
+	padding: .25em .5em;
+	background: #CC5900;
+	color: white;
+	font-size: 1.25em;
+	border-radius: 10px;
+}
+
+.menu {
+	width: 90vw;
+	margin: 6vh auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+main {
+	width: 90vw;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.img {
+	width: 30vw;
+	height: 30vh;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.food-item {
+	width: 90vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1.5em;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-family: 'Baloo Tamma 2', cursive;
+	color: #001E46;
+	position: relative;
+	display: inline-block;
+}
+
+h1::after {
+	content: '';
+	height: 7%;
+	display: block;
+	position: absolute;
+}
+
+h1::after {
+	background: #F89900;
+	width: 50%;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+}
