@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
@@ -62,12 +64,15 @@ main {
 }
 
 .img {
-	width: 30vw;
-	height: 30vh;
-	border: 1px solid black;
+	width: 60vw;
+	height: 35vh;
+	border: 3px solid #E18E00;
+	border-radius: .75em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family: 'Arial', Helvetica, sans-serif;
+	font-size: 1.5em;
 }
 
 .food-item {
@@ -101,4 +106,68 @@ h1::after {
 	bottom: 0px;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+.food-item .food-name, .food-item .price {
+	font-family: 'Oswald', sans-serif;
+}
+
+.food-name {
+	word-spacing: .15em;
+	letter-spacing: .35em;
+	color: #00263E;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.price {
+	color: #CE8300;
+	letter-spacing: .35em;
+	font-weight: bold;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 60vw;
+	margin: .5em 0 .5em 0;
+	padding: .25em .75em;
+	border-bottom: 1px dotted black;
+}
+
+.not-visible {
+	display: none;
+}
+
+@media screen and (min-width: 750px) {
+	main {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0em 1.5em;
+		width: 80vw;
+		margin: auto;
+	}
+
+	.food-item, .info, .img {
+		width: 40vw;
+	}
+
+}
+
+@media screen and (min-width: 1050px) {
+	main {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.food-item, .info, .img {
+		width: 25vw;
+	}
+}
+
+@media screen and (max-width: 532px) {
+	button {
+		transform: scale(.77);
+	}
 }
