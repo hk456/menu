@@ -11,9 +11,7 @@ const viewDinnerBtn = document.querySelector('.dinner-btn');
 function viewAll() {
 	for (prop in foodItems) {
 		if (foodItems.hasOwnProperty(prop)) {
-			if (foodItems[prop].classList[2] == 'not-visible') {
-				foodItems[prop].classList.toggle('not-visible');
-			}
+			foodItems[prop].classList.remove('not-visible');
 		}
 	}
 }
@@ -21,7 +19,13 @@ function viewAll() {
 function viewBreakfast() {
 	for (prop in foodItems) {
 		if (foodItems.hasOwnProperty(prop)) {
-			if (foodItems[prop].classList[1] == 'breakfast') {
+			let isVisible = foodItems[prop].classList[2] != 'not-visible';
+			let isBreakfast = foodItems[prop].classList[1] == 'breakfast';
+			if (isBreakfast && !isVisible) {
+				foodItems[prop].classList.toggle('not-visible');
+			}
+
+			if (!isBreakfast && isVisible) {
 				foodItems[prop].classList.toggle('not-visible');
 			}
 		}
@@ -32,7 +36,13 @@ function viewBreakfast() {
 function viewLunch() {
 	for (prop in foodItems) {
 		if (foodItems.hasOwnProperty(prop)) {
-			if (foodItems[prop].classList[1] == 'lunch') {
+			let isVisible = foodItems[prop].classList[2] != 'not-visible';
+			let isLunch = foodItems[prop].classList[1] == 'lunch';
+			if (isLunch && !isVisible) {
+				foodItems[prop].classList.toggle('not-visible');
+			}
+
+			if (!isLunch && isVisible) {
 				foodItems[prop].classList.toggle('not-visible');
 			}
 		}
@@ -43,7 +53,13 @@ function viewLunch() {
 function viewShakes() {
 	for (prop in foodItems) {
 		if (foodItems.hasOwnProperty(prop)) {
-			if (foodItems[prop].classList[1] == 'shakes') {
+			let isVisible = foodItems[prop].classList[2] != 'not-visible';
+			let isShakes = foodItems[prop].classList[1] == 'shakes';
+			if (isShakes && !isVisible) {
+				foodItems[prop].classList.toggle('not-visible');
+			}
+
+			if (!isShakes && isVisible) {
 				foodItems[prop].classList.toggle('not-visible');
 			}
 		}
@@ -54,7 +70,13 @@ function viewShakes() {
 function viewDinner() {
 	for (prop in foodItems) {
 		if (foodItems.hasOwnProperty(prop)) {
-			if (foodItems[prop].classList[1] == 'dinner') {
+			let isVisible = foodItems[prop].classList[2] != 'not-visible';
+			let isDinner = foodItems[prop].classList[1] == 'dinner';
+			if (isDinner && !isVisible) {
+				foodItems[prop].classList.toggle('not-visible');
+			}
+
+			if (!isDinner && isVisible) {
 				foodItems[prop].classList.toggle('not-visible');
 			}
 		}
